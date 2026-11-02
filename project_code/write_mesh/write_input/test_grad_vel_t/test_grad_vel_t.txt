@@ -1,0 +1,21 @@
+cartesian
+
+3 3
+0 3
+0 3
+
+3
+UpperWall
+12 14
+Neumann V 0 0
+
+InletWall
+15 17
+Dirichlet V 1 0
+
+OtherWalls
+18 23
+Neumann V 0 0
+
+zero
+test_grad_vel_t

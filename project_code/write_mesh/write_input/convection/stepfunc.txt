@@ -1,0 +1,13 @@
+cartesian
+
+10 10
+0 0.1
+0 0.1
+
+1
+FixedWalls
+180 219
+Dirichlet V 0 0
+
+init1
+stepfunc

@@ -1,0 +1,13 @@
+cartesian
+
+40 40
+0 0.1
+0 0.1
+
+1
+Walls
+3120 3279
+Dirichlet V 0 0
+
+zero
+zero

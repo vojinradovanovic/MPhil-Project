@@ -1,0 +1,17 @@
+cartesian
+
+10 10
+0 0.1
+0 0.1
+
+2
+Lid
+180 189
+Dirichlet V 1 0
+
+FixedWalls
+190 219
+Dirichlet V 0 0
+
+init1
+zero

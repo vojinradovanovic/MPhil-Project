@@ -1,0 +1,25 @@
+cartesian
+
+40 10
+0 0.4
+0 0.1
+
+4
+UpperWall
+750 789
+Dirichlet V 0 0
+
+Inlet
+790 799
+Dirichlet V 1 0
+
+Outlet
+800 809
+Neumann V 0 0
+
+LowerWall
+810 849
+Dirichlet V 0 0
+
+init1
+init1

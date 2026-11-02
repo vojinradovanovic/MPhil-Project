@@ -1,0 +1,37 @@
+bw_step
+
+5 12
+-11 0
+0 25.5
+
+100 24
+0 220
+-25.5 25.5
+
+6
+UpperWall
+4791 4895
+Dirichlet V 0 0
+
+Inlet
+4896 4907
+Dirichlet V 13.3 0
+
+MiddleWall
+4908 4912
+Dirichlet V 0 0
+
+VerticalWall
+4913 4924
+Dirichlet V 0 0
+
+Outlet
+4925 4948
+Neumann V 0 0
+
+LowerWall
+4949 5048
+Dirichlet V 0 0
+
+zero
+zero

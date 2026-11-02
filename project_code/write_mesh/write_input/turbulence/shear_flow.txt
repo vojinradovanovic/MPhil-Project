@@ -1,0 +1,29 @@
+cartesian
+
+80 20
+0 0.4
+0 0.1
+
+5
+UpperWall
+3100 3179
+Dirichlet V 0 0
+
+InletSlow
+3180 3189
+Dirichlet V 1 0
+
+InletFast
+3190 3199
+Dirichlet V 1.1 0
+
+Outlet
+3200 3219
+Neumann V 0 0
+
+LowerWall
+3220 3299
+Dirichlet V 0 0
+
+init1
+shearflow

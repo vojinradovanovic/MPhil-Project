@@ -1,0 +1,37 @@
+bw_step
+
+13 30
+-11 0
+0 25.5
+
+260 60
+0 220
+-25.5 25.5
+
+6
+UpperWall
+31647 31919
+Dirichlet V 0 0
+
+Inlet
+31920 31949
+Dirichlet V 22.2 0
+
+MiddleWall
+31950 31962
+Dirichlet V 0 0
+
+VerticalWall
+31963 31992
+Dirichlet V 0 0
+
+Outlet
+31993 32052
+Neumann V 0 0
+
+LowerWall
+32053 32312
+Dirichlet V 0 0
+
+zero
+zero

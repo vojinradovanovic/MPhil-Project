@@ -1,0 +1,25 @@
+cartesian
+
+40 40
+0 0.05
+0 0.05
+
+4
+NeumannUpper
+3120 3159
+Neumann V 0 0
+
+FixedLeft
+3160 3199
+Dirichlet V 0 0
+
+NeumannRight
+3200 3239
+Neumann V 0 0
+
+FixedLower
+3240 3279
+Dirichlet V 0 0
+
+zero
+zero
