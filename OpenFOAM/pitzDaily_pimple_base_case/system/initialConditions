@@ -1,0 +1,42 @@
+// list all initial conditions
+stepLength_mm       11.0;         // mesh dimensions
+pipeLength_mm       220.0;
+outletDiameter_mm   51.0;
+
+inletRes_x          5.0;
+
+stepRes_y           12.0;
+inletRes_y          12.0;
+
+UInlet              13.3;       // velocity (m/s)
+pInlet              0.0;        // 1atm in Pa
+turbIntensity       0.05;
+nuInit              1.56e-05;
+
+relLengthScale      0.1;
+Cnu                 0.09;
+
+// calculate mesh resolution
+outletRes_y         #calc "$stepRes_y + $inletRes_y";
+pipeRes_x           #calc "20 * $inletRes_x";
+
+// calculate inletDiameter_mm and other coordinates
+stepHeight_mm       #calc "$outletDiameter_mm * ($stepRes_y + 0.0)  / ($outletRes_y + 0.0)";
+inletDiameter_mm    #calc "$outletDiameter_mm * ($inletRes_y + 0.0) / ($outletRes_y + 0.0)";
+
+lowWallCoordinate   #calc "-$outletDiameter_mm / 2.";
+midWallCoordinate   #calc "$lowWallCoordinate + $stepHeight_mm";
+highWallCoordinate  #calc "$outletDiameter_mm / 2.";
+
+startCoordinate     #calc "-$stepLength_mm";
+endCoordinate       #calc "$pipeLength_mm";
+
+// calculate mixingLength
+inletDiameter       #calc "$inletDiameter_mm * 0.001";          //  in m
+mixingLength        #calc "$inletDiameter * $relLengthScale";
+
+// calculate k
+kInlet             #calc "0.5 * pow($turbIntensity * $UInlet, 2)";
+
+// calculate epsilon
+epsilonInlet       #calc "pow($Cnu, 0.75) * pow($kInlet, 1.5) / $mixingLength";
